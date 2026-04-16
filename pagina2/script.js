@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const original = el.innerHTML;
 
     el.addEventListener("mouseenter", () => {
-      el.textContent = "Ver en Spotify";
+      el.textContent = "Escuchar en Spotify";
     });
 
     el.addEventListener("mouseleave", () => {
