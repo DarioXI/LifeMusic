@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+                                                                                            /* header */
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    padding: 0 2rem;
+    background: linear-gradient(to bottom, #262625 20%, #0d0d0d 100%);
+}
+
+header h1{
+    margin: 0;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    font-size: 125px;
+    color: #BABFBD;
+
+}
+
+.logos{
+    display: flex;
+    gap: 1rem;
+}
+
+header img{
+    width:30px ;
+    height:30px ;
+    
+}
+header img:hover{
+    transform: scale(1.2);
+}
+                                                                                            /* nav */
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    background-color: #0d0d0d;
+}
+
+nav p:hover{
+    color: skyblue;
+    transform: scale(1.1);
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: inherit;
+    color: #BABFBD;
+
+}
+
+.inicio{
+    color: skyblue;
+}
+                                                                                            /* main */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #Fafafa;
+    padding: 40px 20px 20px;
+}
+
+.contacto{
+    width: min(960px, 100%);
+    background-color: #ffffff;
+    border: 3px solid #8c7c4d;
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 1);
+}
+
+.contactoheader{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contactoheader h2{
+    font-size: 3rem;
+    margin: 0 0 12px;
+    color: #262625;
+}
+
+.contactoheader p{
+    margin: 0;
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.contactoform{
+    display: grid;
+    gap: 20px;
+}
+
+.contactoform label{
+    font-weight: bold;
+    color: #262625;
+}
+
+.contactoform button{
+    width: fit-content;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    background-color: #262625;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contactoform button:hover{
+    transform: scale(1.03);
+    background-color: #3d3d3d;
+}
+
+                                                                                            /* footer */
+footer{
+    background-color:#Fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+                                                                                            /* @media */
+
+/* tablet */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 80px;
+    }
+    
+    nav a {
+        font-size: 18px;
+    }
+}
+
+/* movil */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 50px;
+        padding: 10px 0;
+    }
+    
+    header {
+        padding: 0 1rem;
+    }
+    
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    main {
+        padding: 20px 10px;
+    }
+    
+    .contacto {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    .contactoheader h2 {
+        font-size: 2rem;
+    }
+    
+    .contactoheader p {
+        font-size: 0.95rem;
+    }
+    
+    .contactoform label {
+        font-size: 0.95rem;
+    }
+    
+    .contactoform button {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+}

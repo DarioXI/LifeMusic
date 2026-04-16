@@ -1,0 +1,260 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+                                                                                            /* header */
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    padding: 0 2rem;
+    background: linear-gradient(to bottom, #262625 20%, #0d0d0d 100%);
+}
+header h1{
+    margin: 0;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    font-size: 125px;
+    color: #BABFBD;
+
+}
+.logos{
+    display: flex;
+    gap: 1rem;
+}
+header img{
+    width:30px ;
+    height:30px ;
+    
+}
+header img:hover{
+    transform: scale(1.2);
+}
+
+
+                                                                                            /* nav */
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    background-color: #0d0d0d;
+}
+
+nav p:hover{
+    color: skyblue;
+    transform: scale(1.1);
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: inherit;
+    color: #BABFBD;
+
+}
+
+.tienda{
+    color: skyblue
+}
+                                                                                            /* main */
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    gap: 110px;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+main div a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+
+}
+
+main img{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+}
+
+main div:hover{
+    transform: scale(1.05);
+    border: solid 3px ;
+    border-radius: 5px;
+    border-color: #8c7c4d;
+    transition: all 0.3s ease;
+}
+.paginas{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px;
+    
+}
+
+.paginas button{
+    padding:10px 30px ;
+    border-radius: 5px;
+    background-color: white;
+    border: solid   ;
+    border-color: #8c7c4d;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.paginas button:hover{
+    transform: scale(1.05);
+}
+
+.artista {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.artista:hover {
+  color: #1DB954;
+}
+                                                                                            /* vinilos */
+.ifyourereadingthis .img2{
+    position: absolute;
+    opacity: 0;
+}
+.ifyourereadingthis:hover .img1{
+    opacity: 0;
+}
+.ifyourereadingthis:hover .img2{
+    opacity: 1;
+}
+
+.scorpion .img2{
+    position: absolute;
+    opacity: 0;
+}
+.scorpion:hover .img1{
+    opacity: 0;
+}
+.scorpion:hover .img2{
+    opacity: 1;
+}
+
+
+.honestlynevermind .img2{
+    position: absolute;
+    opacity: 0;
+}
+.honestlynevermind:hover .img1{
+    opacity: 0;
+}
+.honestlynevermind:hover .img2{
+    opacity: 1;
+}
+                                                                                            /* footer */
+footer{
+    background-color:#Fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+                                                                                            /* @media */
+
+/*tablet*/
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 400px);
+        gap: 50px;
+    }
+    
+    main img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    nav a {
+        font-size: 18px;
+    }
+}
+
+/*movil*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 50px;
+    }
+    
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    main div {
+        padding: 5px;
+    }
+    
+    main img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .paginas {
+        flex-direction: column;
+        gap: 5px;
+        margin: 10px 0;
+    }
+    
+    .paginas button {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+                                                                
